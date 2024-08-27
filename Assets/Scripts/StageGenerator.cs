@@ -25,7 +25,7 @@ public class StageGenerator : MonoBehaviour
     void Update()
     {
         //キャラクターの位置から現在のステージチップのインデックスを計算
-        int charaPositionIndex = (int)(character.pisition.z / StageChipSize);
+        int charaPositionIndex = (int)(character.position.z / StageChipSize);
 
         //次のステージチップに入ったらステージの更新処理を行う
         if(charaPositionIndex + preInstantiate > currentChipIndex)
@@ -42,7 +42,7 @@ public class StageGenerator : MonoBehaviour
         //指定のステージチップまでを作成
         for(int i = currentChipIndex + 1;i<=toChipIndex;i++)
         {
-            GameObject stageObject = generatedStageList(i);
+            GameObject stageObject = GeneratedStage(i);
 
             //生成したステージチップを管理リストに追加
             generatedStageList.Add(stageObject);
@@ -57,9 +57,9 @@ public class StageGenerator : MonoBehaviour
     //指定のインデックス位置にStageオブジェクトをランダムに生成
     GameObject GeneratedStage(int chipIndex)
     {
-        int nextStagechip = Random Range(0, stageChips.Length);
+        int nextStagechip = Random. Range(0, stageChips.Length);
 
-        GameObject stageObject = (GameObject)preInstantiate(stageChips[nextStagechip], new Vector3(0, 0, chipIndex * StageChipSize), Quaternion.identity);
+        GameObject stageObject = (GameObject)Instantiate(stageChips[nextStagechip], new Vector3(0, 0, chipIndex * StageChipSize), Quaternion.identity);
 
         return stageObject;
     }
@@ -68,7 +68,7 @@ public class StageGenerator : MonoBehaviour
     void DestroyOldestStage()
     {
         GameObject oldStage = generatedStageList[0];
-        generatedStageList.RemomeAt(0);
+        generatedStageList.RemoveAt(0);
         Destroy(oldStage);
     }
 }
