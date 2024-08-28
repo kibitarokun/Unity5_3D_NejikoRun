@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
+
+
+//2024/08/28 Move to Right メソMaxがMinになってたので修正しました　大窪
+
 public class NejikoController : MonoBehaviour
 {
-
-
     const int MinLane = -2;
     const int MaxLane = 2;
     const float LaneWidth = 1.0f;
@@ -19,7 +22,6 @@ public class NejikoController : MonoBehaviour
 
     Vector3 moveDirection = Vector3.zero;    //キャラクターの動くべき座標（0,0,0）xyz
     int targetLane;
-
     int life = DefaultLife;
     float recoverTime = 0.0f;
 
@@ -36,7 +38,7 @@ public class NejikoController : MonoBehaviour
 
     bool IsStun()
     {
-        return recoverTime >0.0f || life <= 0;
+        return recoverTime > 0.0f || life <= 0;
     }
 
 
@@ -72,35 +74,34 @@ public class NejikoController : MonoBehaviour
         }
 
 
+        //ラジコン操作　抹消
+        //--------------------------------------
+        //※キャラクターコンポーネントのisGroundedプロパティでは常に接地判定をしている
+        //
+        //if (controller.isGrounded)
+        //{
+        //    //上キー（WキーVertical）が押されたら
+        //    if (Input.GetAxis("Vertical") > 0.0f)
+        //    {
 
+        //        moveDirection.z = Input.GetAxis("Vertical") * speedZ;
+        //    }
+        //    else
+        //    {
+        //        moveDirection.z = 0.0f;
+        //    }
 
+        //    //左右キー（Horizontal）にて回転させる命令
+        //    transform.Rotate(0, Input.GetAxis("Horizontal") * 2, 0);//教科書は(3,0)
 
-        //キャラクターコンポーネントのisGroundedプロパティでは常に接地判定をしている
-        if (controller.isGrounded)
-        {
-            //上キー（WキーVertical）が押されたら
-            if (Input.GetAxis("Vertical") > 0.0f)
-            {
-
-                moveDirection.z = Input.GetAxis("Vertical") * speedZ;
-            }
-            else
-            {
-                moveDirection.z = 0.0f;
-            }
-
-            //左右キー（Horizontal）にて回転させる命令
-            transform.Rotate(0, Input.GetAxis("Horizontal") * 2, 0);//教科書は(3,0)
-
-            if (Input.GetButton("Jump"))
-            {
-                moveDirection.y = speedJump;
-                //Jumpアニメの発動
-                animator.SetTrigger("jump");
-            }
-
-
-        }
+        //    if (Input.GetButton("Jump"))
+        //    {
+        //        moveDirection.y = speedJump;
+        //        //Jumpアニメの発動
+        //        animator.SetTrigger("jump");
+        //    }
+        //}
+        //--------------------------------------
 
         //重力分の力を毎フレーム追加(どんどん重くなる)
         //* Time.deltaTimeはどのPCでも同じスピードで動くようにするための補正
@@ -132,7 +133,7 @@ public class NejikoController : MonoBehaviour
     public void MoveToRight()
     {
         if (IsStun()) return;
-        if (controller.isGrounded && targetLane < MinLane) targetLane++;
+        if (controller.isGrounded && targetLane < MaxLane) targetLane++;
 
     }
 
