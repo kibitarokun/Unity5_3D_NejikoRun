@@ -1,0 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class GameController : MonoBehaviour
+{
+
+    public NejikoController nejiko;
+    public Text scoreText;
+    public LifePanel LifePanel;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        int score = CalcScore();
+        scoreText.text ="Score :" + score +"m";
+
+        lifePanel.UpdateLife(nejiko.Life());
+
+
+    }
+
+    int CalScore()
+    {
+        return (int)nejiko.transform.position.z;
+    }
+
+
+}
