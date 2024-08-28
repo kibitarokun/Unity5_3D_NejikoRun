@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
 
     public NejikoController nejiko;
     public Text scoreText;
-    public LifePanel LifePanel;
+    public LifePanel lifePanel;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
 
     }
 
-    int CalScore()
+    int CalcScore()
     {
         return (int)nejiko.transform.position.z;
     }
