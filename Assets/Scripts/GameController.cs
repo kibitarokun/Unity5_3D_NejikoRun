@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,8 @@ public class GameController : MonoBehaviour
 {
 
     public NejikoController nejiko;
-    public Text scoreText;
+    //public Text scoreText; これだと、テキストメッシュプロは入らない
+    public TMP_Text scoreText;
     public LifePanel lifePanel;
 
     // Start is called before the first frame update
@@ -23,7 +25,7 @@ public class GameController : MonoBehaviour
     {
 
         int score = CalcScore();
-        scoreText.text ="Score :" + score +"m";
+        scoreText.text = "Score :" + score + "m";
 
         lifePanel.UpdateLife(nejiko.Life());
 
