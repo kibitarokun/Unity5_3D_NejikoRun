@@ -434,6 +434,10 @@ PrefabInstance:
       value: Nejiko
       objectReference: {fileID: 0}
     - target: {fileID: 7952885414372420579, guid: a780da896ca904035b33f90d86b0ba4d, type: 3}
+      propertyPath: speedZ
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7952885414372420579, guid: a780da896ca904035b33f90d86b0ba4d, type: 3}
       propertyPath: gravity
       value: 20
       objectReference: {fileID: 0}
@@ -605,6 +609,102 @@ PrefabInstance:
     - target: {fileID: 1433995027291180647, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
       propertyPath: m_Name
       value: ScoreText
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878249040928612496, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878249040928612496, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878249040928612496, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 627842611}
+    - target: {fileID: 3878249040928612496, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878249040928612496, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveToRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878249040928612496, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NejikoController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878249040928612496, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587404823444488031, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587404823444488031, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: beeba34bf319afb4593ed0bf6450e345, type: 3}
+    - target: {fileID: 4931787228638190414, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 627842611}
+    - target: {fileID: 4931787228638190414, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveToLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 4931787228638190414, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NejikoController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4931787228638190414, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349607658251787299, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349607658251787299, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 24c02fd214e0aff409e98baa3541a4f6, type: 3}
+    - target: {fileID: 5782054977267495594, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782054977267495594, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 143660efa52845e4386dbcd179ecd47b, type: 3}
+    - target: {fileID: 6613625043921555988, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613625043921555988, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613625043921555988, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 627842611}
+    - target: {fileID: 6613625043921555988, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613625043921555988, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613625043921555988, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NejikoController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613625043921555988, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7525133375650397527, guid: f0fbea1e3e768244db2f72e2b88b544b, type: 3}
       propertyPath: m_Pivot.x
